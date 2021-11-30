@@ -51,24 +51,7 @@ sudo dpkg -i homeassistant-supervised.deb
 
 ha jobs options --ignore-conditions healthy
 
-stop
 
-
-From: https://peyanski.com/how-to-install-home-assistant-supervised-official-way/
-prerequisites:
-sudo apt-get install jq wget curl avahi-daemon udisks2 libglib2.0-bin network-manager dbus apparmor -y
-
-
-
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
-sudo usermod -aG docker pi
-
-wget https://github.com/home-assistant/os-agent/releases/download/1.2.2/os-agent_1.2.2_linux_armv7.deb
-sudo dpkg -i os-agent_1.2.2_linux_armv7.deb
-
-wget https://github.com/home-assistant/supervised-installer/releases/latest/download/homeassistant-supervised.deb
-sudo dpkg -i homeassistant-supervised.deb
 
 
 

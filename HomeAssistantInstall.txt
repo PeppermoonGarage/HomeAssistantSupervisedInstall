@@ -44,7 +44,7 @@ Install HA agent
 ~wget https://github.com/home-assistant/os-agent/releases/download/1.2.2/os-agent_1.2.2_linux_armv7.deb
 ~sudo dpkg -i os-agent_1.2.2_linux_armv7.deb
 
-Install HA - must be hardwire connected to network!  Choose raspberryPi4, not 64 bit if 32 bit OS
+Install HA - must be hardwire connected to network, not WiFi!  Choose raspberryPi4 32 bit for this part
 ~wget https://github.com/home-assistant/supervised-installer/releases/latest/download/homeassistant-supervised.deb
 ~sudo dpkg -i homeassistant-supervised.deb
 

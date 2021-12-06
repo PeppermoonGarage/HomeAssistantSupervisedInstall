@@ -5,25 +5,25 @@ Boot Pi
 check router for Pi IP address
 SSH into Pi
 
-sudo nano /etc/dhcpcd.conf
-add...........
+~sudo nano /etc/dhcpcd.conf
+add IP information as appropriate for your network, such as ...........
 interface wlan0
 static ip_address=192.168.1.101/24
 static routers=192.168.1.1
 static domain_name_servers=192.168.1.1 8.8.8.8
 
 SSH into Pi
-sudo raspi-config - options 1, S5, B3
-sudo reboot
-sudo apt install xrdp
-sudo apt update && sudo apt upgrade
-sudo apt autoremove
+~sudo raspi-config - options 1, S5, B3
+~sudo reboot
+~sudo apt install xrdp
+~sudo apt update && sudo apt upgrade
+~sudo apt autoremove
 
 
 
 Windows RDP should now work.
 
-sudo nano /etc/NetworkManager/conf.d/100-disable-wifi-mac-randomization.conf
+~sudo nano /etc/NetworkManager/conf.d/100-disable-wifi-mac-randomization.conf
 add......
 [connection]
 wifi.mac-address-randomization=1
@@ -31,32 +31,32 @@ wifi.mac-address-randomization=1
 wifi.scan-rand-mac-address=no
 
 Install pre-reqs
-sudo apt-get install jq wget curl avahi-daemon udisks2 libglib2.0-bin network-manager dbus apparmor -y
-sudo reboot
+~sudo apt-get install jq wget curl avahi-daemon udisks2 libglib2.0-bin network-manager dbus apparmor -y
+~sudo reboot
 
 Install Docker CE from https://docs.docker.com/engine/install/debian/
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
-docker --version         to check intall
-sudo usermod -aG docker pi
+~curl -fsSL https://get.docker.com -o get-docker.sh
+~sudo sh get-docker.sh
+~docker --version         to check intall
+~sudo usermod -aG docker pi
 
-Install agent
-wget https://github.com/home-assistant/os-agent/releases/download/1.2.2/os-agent_1.2.2_linux_armv7.deb
-sudo dpkg -i os-agent_1.2.2_linux_armv7.deb
+Install HA agent
+~wget https://github.com/home-assistant/os-agent/releases/download/1.2.2/os-agent_1.2.2_linux_armv7.deb
+~sudo dpkg -i os-agent_1.2.2_linux_armv7.deb
 
 Install HA - must be hardwire connected to network!  Choose raspberryPi4, not 64 bit if 32 bit OS
-wget https://github.com/home-assistant/supervised-installer/releases/latest/download/homeassistant-supervised.deb
-sudo dpkg -i homeassistant-supervised.deb
+~wget https://github.com/home-assistant/supervised-installer/releases/latest/download/homeassistant-supervised.deb
+~sudo dpkg -i homeassistant-supervised.deb
 
 
-ha jobs options --ignore-conditions healthy
+~ha jobs options --ignore-conditions healthy
 
 Install bluepy into Python3 (Python 3.9.2 comes with Bullseye as of late 2021)
-sudo apt-get install python3-pip libglib2.0-dev
-sudo pip3 install bluepy
+~sudo apt-get install python3-pip libglib2.0-dev
+~sudo pip3 install bluepy
 
 Install paho MQTT client for 
-pip3 install paho-mqtt
+~pip3 install paho-mqtt
 
 
 

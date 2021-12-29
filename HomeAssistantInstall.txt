@@ -1,9 +1,13 @@
 Use Raspberry Pi Imager 
 -Raspian Full version (It's 32 bit)
--CTRL+Shift+X for hidden menu with SSH and WiFi options
+-CTRL+Shift+X for hidden menu with SSH and WiFi options.  Set Locale options here as well.
 Boot Pi
 check router for Pi IP address
 SSH into Pi
+
+Set date/time - use current values
+~sudo date -s '2021-12-29 12:00:00'
+
 
 ~sudo nano /etc/dhcpcd.conf
 add IP information as appropriate for your network, such as ...........
@@ -13,20 +17,20 @@ static routers=192.168.1.1
 static domain_name_servers=192.168.1.1 8.8.8.8
 
 SSH into Pi
-~sudo raspi-config - options 1, S5, B3
+~sudo raspi-config - options 1, S5, B3 - also option 5 to set locale
 ~sudo reboot
 ~sudo apt install xrdp
 ~sudo apt update && sudo apt upgrade
 ~sudo apt autoremove
 
-
-
 Windows RDP should now work.
 
 Install pre-reqs
 ~sudo apt-get install jq wget curl avahi-daemon udisks2 libglib2.0-bin network-manager dbus apparmor -y
-~sudo reboot
+This may time out on the SSH screen, it should be OK
 
+
+This will keep you MAC from changing and giving a different DHCP address each time there is a reboot.
 ~sudo nano /etc/NetworkManager/conf.d/100-disable-wifi-mac-randomization.conf
 add......
 [connection]
@@ -34,9 +38,7 @@ wifi.mac-address-randomization=1
 [device]
 wifi.scan-rand-mac-address=no
 
-Set Locale on the desktop with Preferences and reboot - this is set for English-US, change as needed.
-
-
+~sudo reboot
 
 Install Docker CE from https://docs.docker.com/engine/install/debian/
 ~curl -fsSL https://get.docker.com -o get-docker.sh

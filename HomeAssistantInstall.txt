@@ -23,6 +23,10 @@ SSH into Pi
 
 Windows RDP should now work.
 
+Install pre-reqs
+~sudo apt-get install jq wget curl avahi-daemon udisks2 libglib2.0-bin network-manager dbus apparmor -y
+~sudo reboot
+
 ~sudo nano /etc/NetworkManager/conf.d/100-disable-wifi-mac-randomization.conf
 add......
 [connection]
@@ -30,9 +34,7 @@ wifi.mac-address-randomization=1
 [device]
 wifi.scan-rand-mac-address=no
 
-Install pre-reqs
-~sudo apt-get install jq wget curl avahi-daemon udisks2 libglib2.0-bin network-manager dbus apparmor -y
-~sudo reboot
+Set Locale and reboot
 
 Install Docker CE from https://docs.docker.com/engine/install/debian/
 ~curl -fsSL https://get.docker.com -o get-docker.sh
@@ -44,7 +46,9 @@ Install HA agent
 ~wget https://github.com/home-assistant/os-agent/releases/download/1.2.2/os-agent_1.2.2_linux_armv7.deb
 ~sudo dpkg -i os-agent_1.2.2_linux_armv7.deb
 
-Install HA - must be hardwire connected to network, not WiFi!  Choose raspberryPi4 32 bit for this part
+??? sudo ifconfig eth0 down
+
+Install HA - Possibly - must be hardwire connected to network, not WiFi!  Choose raspberryPi4 (not 64 bit) for this part
 ~wget https://github.com/home-assistant/supervised-installer/releases/latest/download/homeassistant-supervised.deb
 ~sudo dpkg -i homeassistant-supervised.deb
 

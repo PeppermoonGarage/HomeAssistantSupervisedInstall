@@ -34,7 +34,9 @@ wifi.mac-address-randomization=1
 [device]
 wifi.scan-rand-mac-address=no
 
-Set Locale and reboot
+Set Locale on the desktop with Preferences and reboot - this is set for English-US, change as needed.
+
+
 
 Install Docker CE from https://docs.docker.com/engine/install/debian/
 ~curl -fsSL https://get.docker.com -o get-docker.sh

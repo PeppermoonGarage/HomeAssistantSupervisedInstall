@@ -68,6 +68,7 @@ Install paho MQTT client for
 
 Install the following Add-Ins from Home Assistant
 MQTT Broker
+ESPHome
 Influx
 Node Red
 Grafana

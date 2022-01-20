@@ -66,6 +66,11 @@ Install bluepy into Python3 (Python 3.9.2 comes with Bullseye as of late 2021)
 Install paho MQTT client for 
 ~pip3 install paho-mqtt
 
+Install the following Add-Ins from Home Assistant
+MQTT Broker
+Influx
+Node Red
+Grafana
 
 
 

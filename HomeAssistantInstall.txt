@@ -25,6 +25,9 @@ SSH into Pi
 
 Windows RDP should now work.
 
+Utility to check for services that need restart.  To run use "sudo needrestart"
+sudo apt install needrestart
+
 Install pre-reqs
 ~sudo apt-get install jq wget curl avahi-daemon udisks2 libglib2.0-bin network-manager dbus apparmor -y
 This may time out on the SSH screen, it should be OK

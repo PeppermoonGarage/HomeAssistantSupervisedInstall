@@ -6,7 +6,9 @@ check router for Pi IP address
 SSH into Pi
 
 Set date/time - use current values
-~sudo date -s '2021-12-29 12:00:00'
+~sudo date -s '2021-12-29 12:00:00' 
+Or 
+~sudo apt install ntp
 
 
 ~sudo nano /etc/dhcpcd.conf

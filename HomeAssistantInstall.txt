@@ -1,7 +1,7 @@
 Use Raspberry Pi Imager 
--Raspian Full version (It's 32 bit)
--CTRL+Shift+X for hidden menu with SSH and WiFi options.  Set Locale options here as well.
-Boot Pi
+-Raspberry Pi OS (other) - Raspian Full (32-bit) or Raspberry Pi OS (64-bit)
+-Select setting icon for menu with SSH and WiFi options.  Set Wireless LAN country, Locale options here as well.
+Boot Pi with bottable SD card just created
 check router for Pi IP address
 SSH into Pi
 

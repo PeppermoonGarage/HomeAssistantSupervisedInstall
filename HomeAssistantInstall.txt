@@ -1,7 +1,7 @@
 Use Raspberry Pi Imager 
 -Raspberry Pi OS (other) - Raspian Full (32-bit) or Raspberry Pi OS (64-bit)
 -Select setting icon for menu with SSH and WiFi options.  Set Wireless LAN country, Locale options here as well.
-Boot Pi with bottable SD card just created
+Boot Pi with bootable SD card just created
 check router for Pi IP address
 SSH into Pi
 
@@ -25,6 +25,16 @@ SSH into Pi
 ~sudo apt update && sudo apt upgrade
 ~sudo apt autoremove
 
+Fix for XRDP............
+sudo nano /etc/X11/xrdp/xorg.conf
+Find:
+Option "DRMDevice" "/dev/dri/renderD128"
+Change to:
+#Option "DRMDevice" "/dev/dri/renderD128"
+Option "DRMDevice" ""
+Save and exit
+sudo reboot
+
 Windows RDP should now work.
 
 Utility to check for services that need restart.  To run use "sudo needrestart"
@@ -32,7 +42,7 @@ sudo apt install needrestart
 
 Install pre-reqs
 ~sudo apt-get install jq wget curl avahi-daemon udisks2 libglib2.0-bin network-manager dbus apparmor -y
-This may time out on the SSH screen, it should be OK
+This may take a long time on the SSH screen, and drop the connection it should be OK
 
 
 This will keep you MAC from changing and giving a different DHCP address each time there is a reboot.

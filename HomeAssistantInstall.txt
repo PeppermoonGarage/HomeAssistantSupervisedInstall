@@ -62,8 +62,13 @@ Install Docker CE from https://docs.docker.com/engine/install/debian/
 ~sudo usermod -aG docker pi
 
 Install HA agent
+32-bit:  
 ~wget https://github.com/home-assistant/os-agent/releases/download/1.2.2/os-agent_1.2.2_linux_armv7.deb
 ~sudo dpkg -i os-agent_1.2.2_linux_armv7.deb
+OR 64-bit:
+wget https://github.com/home-assistant/os-agent/releases/download/1.2.2/os-agent_1.2.2_linux_aarch64.deb
+dpkg -i os-agent_1.2.2_linux_aarch64.deb
+
 
 ??? sudo ifconfig eth0 down
 

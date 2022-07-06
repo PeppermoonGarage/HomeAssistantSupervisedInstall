@@ -93,5 +93,6 @@ Influx
 Node Red
 Grafana
 
-
+Install raspap for the raspberry pi to function as a wireless ap
+~curl -sL https://install.raspap.com | bash
 

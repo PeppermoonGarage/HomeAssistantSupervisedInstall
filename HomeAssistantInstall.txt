@@ -9,6 +9,7 @@ Set date/time - use current values
 ~sudo date -s '2021-12-29 12:00:00' 
 Or 
 ~sudo apt install ntp
+64 bit image already has this maybe??????
 
 
 ~sudo nano /etc/dhcpcd.conf
@@ -19,7 +20,7 @@ static routers=192.168.1.1
 static domain_name_servers=192.168.1.1 8.8.8.8
 
 SSH into Pi
-~sudo raspi-config - options 1, S5, B3 - also option 5 to set locale
+~sudo raspi-config - options 1, S5, B3 - also option 5 to set locale # maybe be set with the imager
 ~sudo reboot
 ~sudo apt install xrdp
 ~sudo apt update && sudo apt upgrade

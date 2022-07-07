@@ -3,7 +3,7 @@ Use Raspberry Pi Imager
 -Select setting icon for menu with SSH and WiFi options.  Set Wireless LAN country, Locale options here as well.
 Boot Pi with bootable SD card just created
 check router for Pi IP address
-SSH into Pi
+SSH into Pi using the IP or hostname i.e. ssh pi@raspberrypi.local
 
 Set date/time - use current values
 ~sudo date -s '2021-12-29 12:00:00' 

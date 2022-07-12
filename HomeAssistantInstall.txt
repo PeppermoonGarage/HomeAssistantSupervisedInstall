@@ -1,3 +1,5 @@
+Inspired by https://peyanski.com/how-to-install-home-assistant-supervised-official-way/
+
 Use Raspberry Pi Imager 
 -Raspberry Pi OS (other) - Raspian Full (32-bit) or Raspberry Pi OS (64-bit)
 -Select setting icon for menu with SSH and WiFi options.  Set Wireless LAN country, Locale options here as well.
@@ -46,7 +48,7 @@ Install pre-reqs
 This may take a long time on the SSH screen, and drop the connection it should be OK
 
 
-This will keep you MAC from changing and giving a different DHCP address each time there is a reboot.
+This is important, do it.  This will keep you MAC from changing and giving a different DHCP address each time there is a reboot.
 ~sudo nano /etc/NetworkManager/conf.d/100-disable-wifi-mac-randomization.conf
 add......
 [connection]
@@ -78,6 +80,8 @@ Install HA - Possibly - must be hardwire connected to network, not WiFi!  Choose
 ~wget https://github.com/home-assistant/supervised-installer/releases/latest/download/homeassistant-supervised.deb
 ~sudo dpkg -i homeassistant-supervised.deb
 Wait forever plus one day.
+if it hangs, do this:
+sudo apt --fix-broken install
 
 ~ha jobs options --ignore-conditions healthy
 

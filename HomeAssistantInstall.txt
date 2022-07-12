@@ -62,7 +62,8 @@ Install Docker CE from https://docs.docker.com/engine/install/debian/
 ~docker --version         to check intall
 ~sudo usermod -aG docker pi
 
-Install HA agent - this wants an ethernet connection, or you can download it to the boot partition of the SD card and run it from there.
+Install HA agent - this wants an ethernet connection, or you can download it to the boot partition of the SD card and run it from there.  
+This needs to match the OS - 32 or 64:
 32-bit:  
 ~wget https://github.com/home-assistant/os-agent/releases/download/1.2.2/os-agent_1.2.2_linux_armv7.deb
 ~sudo dpkg -i os-agent_1.2.2_linux_armv7.deb

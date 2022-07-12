@@ -86,7 +86,7 @@ sudo apt --fix-broken install
 ~ha jobs options --ignore-conditions healthy
 
 Install bluepy into Python3 (Python 3.9.2 comes with Bullseye as of late 2021)
-~sudo apt-get install python3-pip libglib2.0-dev
+(Not Needed) ~sudo apt-get install python3-pip libglib2.0-dev
 ~sudo pip3 install bluepy
 
 Install paho MQTT client for 

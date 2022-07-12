@@ -77,7 +77,7 @@ dpkg -i os-agent_1.2.2_linux_aarch64.deb
 Install HA - Possibly - must be hardwire connected to network, not WiFi!  Choose raspberryPi4 (not 64 bit) for this part
 ~wget https://github.com/home-assistant/supervised-installer/releases/latest/download/homeassistant-supervised.deb
 ~sudo dpkg -i homeassistant-supervised.deb
-
+Wait forever plus one day.
 
 ~ha jobs options --ignore-conditions healthy
 

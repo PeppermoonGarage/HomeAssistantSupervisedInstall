@@ -22,11 +22,25 @@ static routers=192.168.1.1
 static domain_name_servers=192.168.1.1 8.8.8.8
 
 SSH into Pi
-~sudo raspi-config - options 1, S5, B3 - also option 5 to set locale # maybe be set with the imager
+~sudo raspi-config - options 1, S5, B3 - also option 5 to set locale 
 ~sudo reboot
 ~sudo apt install xrdp
 ~sudo apt update && sudo apt upgrade
 ~sudo apt autoremove
+
+Install RaspAP - say yes for all non-beta options
+~curl -sL https://install.raspap.com | bash
+~sudo reboot
+
+After the reboot at the end of the installation the wireless AP network will be configured as follows:
+
+IP address: 10.3.141.1
+Username: admin
+Password: secret
+DHCP range: 10.3.141.50 to 10.3.141.255
+SSID: raspi-webgui
+Password: ChangeMe
+
 
 Fix for XRDP............
 sudo nano /etc/X11/xrdp/xorg.conf

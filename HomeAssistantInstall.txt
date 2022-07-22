@@ -19,6 +19,8 @@ Install external wireless drivers for "Archer T2U Plus"
 ~cd rtl8814au
 ~sudo make dkms_install
 
+Install raspap for the raspberry pi to function as a wireless ap
+~curl -sL https://install.raspap.com | bash
 
 ~sudo nano /etc/dhcpcd.conf
 add IP information as appropriate for your network, such as ...........
@@ -119,6 +121,5 @@ Influx
 Node Red
 Grafana
 
-Install raspap for the raspberry pi to function as a wireless ap
-~curl -sL https://install.raspap.com | bash
+
 

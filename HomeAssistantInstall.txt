@@ -13,6 +13,12 @@ Or
 ~sudo apt install ntp
 64 bit image already has this maybe??????
 
+Install external wireless drivers for "Archer T2U Plus"
+~sudo apt install git dkms
+~git clone https://github.com/aircrack-ng/rtl8814au.git
+~cd rtl8814au
+~sudo make dkms_install
+
 
 ~sudo nano /etc/dhcpcd.conf
 add IP information as appropriate for your network, such as ...........

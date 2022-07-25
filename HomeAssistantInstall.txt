@@ -22,6 +22,8 @@ Do not plug in additional USB WiFi just yet.
 sudo apt update && sudo apt upgrade
 
 Install external wireless drivers for "Archer T2U Plus"
+Follow the instructions at https://github.com/morrownr/8821au-20210708
+or....
 ~sudo apt install git dkms
 ~git clone https://github.com/aircrack-ng/rtl8814au.git
 ~cd rtl8814au

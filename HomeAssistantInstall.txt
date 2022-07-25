@@ -15,6 +15,12 @@ Or
 
 run ~sudo raspi-config and set wireless country and locale
 
+Add additional DNS servers 8.8.8.8 and 208.67.222.222 if needed using sudo nano /etc/resolv.conf
+
+Do not plug in additional USB WiFi just yet.
+
+sudo apt update && sudo apt upgrade
+
 Install external wireless drivers for "Archer T2U Plus"
 ~sudo apt install git dkms
 ~git clone https://github.com/aircrack-ng/rtl8814au.git

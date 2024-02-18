@@ -104,7 +104,7 @@ This needs to match the OS - 32 or 64:
 ~sudo dpkg -i os-agent_1.2.2_linux_armv7.deb
 OR 64-bit:
 wget https://github.com/home-assistant/os-agent/releases/download/1.2.2/os-agent_1.2.2_linux_aarch64.deb
-dpkg -i os-agent_1.2.2_linux_aarch64.deb
+sudo dpkg -i os-agent_1.2.2_linux_aarch64.deb
 
 
 ??? sudo ifconfig eth0 down
